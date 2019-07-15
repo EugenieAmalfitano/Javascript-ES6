@@ -8,6 +8,9 @@ class Vehicle {
     start() {
         console.log('starting vehicle');
     }
+    static getCompanyName() {
+        console.log('My Company');
+    }
 }
 
 // Derived class
@@ -27,4 +30,7 @@ class Car extends Vehicle {
 
 let c = new Car();
 c.start();
+
+// A static method on the base class is available to the derived class.
+Car.getCompanyName();
 
