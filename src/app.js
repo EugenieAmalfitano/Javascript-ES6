@@ -1,10 +1,10 @@
 class Drone {
-    // details here
+    constructor(id, name) {
+        console.log('in Drone constructor, id: ' + id + ', name: ' + name);
+    }
 }
 
-let drone = new Drone(); // creates new instance of the drone
+let drone = new Drone('A123', 'Flyer'); // creates new instance of the drone
 
-console.log(typeof drone); // object
-console.log(typeof Drone); // function
-console.log(drone instanceof Drone); // returns true
+
 
