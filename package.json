@@ -1,0 +1,26 @@
+{
+  "name": "drones",
+  "version": "1.0.0",
+  "description": "Based on Pluralsight Class Object-oriented Programming in JavaScript - ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EugenieAmalfitano/Javascript-ES6.git"
+  },
+  "author": "Eugenie A Amalfitano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EugenieAmalfitano/Javascript-ES6/issues"
+  },
+  "homepage": "https://github.com/EugenieAmalfitano/Javascript-ES6#readme",
+  "dependencies": {
+    "es6-module-loader": "^0.17.11",
+    "traceur": "0.0.111"
+  },
+  "devDependencies": {
+    "lite-server": "^2.5.3"
+  }
+}
