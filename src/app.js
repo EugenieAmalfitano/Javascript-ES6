@@ -6,7 +6,7 @@ class Drone {
 }
 
 let drone = new Drone('A123', 'Flyer'); // creates new instance of the drone
-console.log('id: ' + drone.id + ', name: ' + drone.name);
+console.log('id: ' + drone['id'] + ', name: ' + drone['name']);
 
 
 
