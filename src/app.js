@@ -1,19 +1,22 @@
 const SP = ' ';
 class Drone {
-    constructor(id, name) {
-        this.id = id;       // instance properties
-        this.name = name;   // cannot be accessed before object is instantiated
+    constructor(id) {
+        this._id = id;      // underscore usually means private   }
     }
-    static getCompany() {
-        console.log('in getCompany' + SP + this.id); // this.id is undefined on a static method because it belongs to the instance.
+
+    // getter can modify or validate the property that is being retrieved
+    get id() {
+        this._id = this._id.toLowerCase();
+        if (this._id.includes('x')) throw 'Cannot contain an X';
+        return this._id;
     }
-    fly() {
-        console.log('Drone ' + this.id + ' is flying'); // you have to keep 'this' or it won't work.
+
+    // setter allows assigning a new value to the property
+    set id(value) {
+        this._id = value;
     }
 }
 
-let drone = new Drone('A123', 'Flyer');
-let drone2 = new Drone('B456', 'Twirl');
-drone.fly();
-drone2.fly();
-Drone.getCompany(); // static method only works on the class
+let drone = new Drone('A123');
+drone.id = 'B456Y';
+console.log('drone id: ' + drone.id);
