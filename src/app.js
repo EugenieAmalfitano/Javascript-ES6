@@ -1,7 +1,8 @@
-droneId = 5;
-console.log('droneID ' + droneId);
-console.log('droneID ' + window.droneId);
+class Drone {
+    // details here
+}
 
-let droneId2 = 5;
-console.log('droneID ' + droneId2);
-console.log('droneID ' + window.droneId2); // returns undefined; let scopes to this. 
+let drone = new Drone(); // creates new instance of the drone
+
+console.log(typeof drone); // object
+console.log(typeof Drone); // function
