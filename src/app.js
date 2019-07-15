@@ -6,20 +6,32 @@ const SP = ' ';
 
 // Vehicle will not be instatiated directly, as with most inherited classes.
 class Vehicle {
-
+    constructor(licenseNum) {
+        console.log('constructing vehicle: ' + licenseNum);
+        this.licenseNum = licenseNum;
+    }
 }
 
 class Drone extends Vehicle {
-
+    constructor(licenseNum) {
+        super(licenseNum); // ensures the constructor for VEHICLE is executing first.
+        // even if VEHICLE does not have a constructor, it is implied.
+        console.log('constructing drone');
+    }
 }
 
 class Car extends Vehicle {
+    constructor(licenseNum) {
+        super(licenseNum); // ensures the constructor for VEHICLE is executing first.
+        // even if VEHICLE does not have a constructor, it is implied.
+        console.log('constructing car');
+    }
 
 }
 
-let c = new Car();
+let c = new Car('A123');
+// license number is available to all vehicles
+console.log(c.licenseNum);
 
-// when we insantiate a class, it's an instance of any inherited class as well as object
-console.log(c instanceof Car)
-console.log(c instanceof Vehicle)
-console.log(c instanceof Object)
+let d = new Drone('B456');
+console.log(d.licenseNum);
