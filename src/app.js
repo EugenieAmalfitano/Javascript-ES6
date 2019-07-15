@@ -27,6 +27,7 @@ class Car extends Vehicle {
         console.log('starting car');
     }
     static getCompanyName() {
+        super.getCompanyName();
         console.log('My Other Company');
     }
 }
