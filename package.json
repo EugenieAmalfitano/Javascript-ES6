@@ -4,7 +4,8 @@
   "description": "Based on Pluralsight Class Object-oriented Programming in JavaScript - ES6",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
   },
   "repository": {
     "type": "git",
