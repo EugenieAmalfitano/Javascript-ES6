@@ -1,3 +1,14 @@
+// SUMMARY
+
+/* Classes and Objects
+Insantiating a class, it becomes an bject
+Constuctor - code that automatically runs when you instantiate the object. 
+Properties - pieces of informationthat belong to an instance
+Methods - functions that belong to an instance
+Static Properties and Methods - access these by using class name itself. 
+Getters and Setters - let us execute code when we get or set a property; for example, validate or log. 
+ */
+
 const SP = ' ';
 class Drone {
     constructor(id) {
