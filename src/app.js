@@ -3,35 +3,32 @@
 // -- can inherit constructors, properties, and methods. 
 
 const SP = ' ';
-
-// Vehicle will not be instatiated directly, as with most inherited classes.
+// Base class
 class Vehicle {
     constructor(licenseNum) {
-        console.log('constructing vehicle: ' + licenseNum);
-        this.licenseNum = licenseNum;
+        this.gpsEnabled = true;
     }
 }
 
+// Derived class
 class Drone extends Vehicle {
-    constructor(licenseNum) {
-        super(licenseNum); // ensures the constructor for VEHICLE is executing first.
-        // even if VEHICLE does not have a constructor, it is implied.
+    constructor() {
+        super();
         console.log('constructing drone');
     }
 }
 
+// Derived class
 class Car extends Vehicle {
-    constructor(licenseNum) {
-        super(licenseNum); // ensures the constructor for VEHICLE is executing first.
-        // even if VEHICLE does not have a constructor, it is implied.
+    constructor() {
+        super();
+        this.gpsEnabled = false;
         console.log('constructing car');
     }
-
 }
 
+// It helps to know whether property belongs to base class or derived class
+// The derived class can change the value of the property in the base class
 let c = new Car('A123');
-// license number is available to all vehicles
-console.log(c.licenseNum);
+console.log('GPS ENABLED:' + SP + c.gpsEnabled);
 
-let d = new Drone('B456');
-console.log(d.licenseNum);
