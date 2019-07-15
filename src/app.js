@@ -5,30 +5,26 @@
 const SP = ' ';
 // Base class
 class Vehicle {
-    constructor(licenseNum) {
-        this.gpsEnabled = true;
+    start() {
+        console.log('starting vehicle');
     }
 }
 
 // Derived class
 class Drone extends Vehicle {
-    constructor() {
-        super();
-        console.log('constructing drone');
+    start() {
+        console.log('starting drone');
     }
 }
 
 // Derived class
 class Car extends Vehicle {
-    constructor() {
-        super();
-        this.gpsEnabled = false;
-        console.log('constructing car');
+    start() {
+        super.start();
+        console.log('starting car');
     }
 }
 
-// It helps to know whether property belongs to base class or derived class
-// The derived class can change the value of the property in the base class
-let c = new Car('A123');
-console.log('GPS ENABLED:' + SP + c.gpsEnabled);
+let c = new Car();
+c.start();
 
