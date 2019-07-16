@@ -1,11 +1,13 @@
 import { Car } from '../src/classes/car.js';
 import { Drone } from '../src/classes/drone.js';
+import { DataError } from './data-error.js';
 
 export class FleetDataService {
     constructor() {
         console.log('in fleetDataService');
         this.cars = [];
         this.drones = [];
+        this.errors = [];
     }
 
     loadData(fleet) {
@@ -19,15 +21,24 @@ export class FleetDataService {
                     let drone = this.loadDrone(data);
                     this.drones.push(drone);
                     break;
+                default:
+                    let e = new DataError('Invalid vehicle type', data);
+                    this.errors.push(e);
+                    break;
             }
         }
     }
 
     loadCar(car) {
-        let c = new Car(car.license, car.model, car.latLong);
-        c.miles = car.miles;
-        c.make = car.make;
-        return c;
+        try {
+            let c = new Car(car.license, car.model, car.latLong);
+            c.miles = car.miles;
+            c.make = car.make;
+            return c;
+        } catch (error) {
+            this.errors.push(new DataError('error loading car', car));
+        }
+        return null;
     }
 
     loadDrone(drone) {
