@@ -29,7 +29,6 @@ export let fleet = [
         make: 'Tesla',
         model: 'Quick Transport',
         miles: '15600',
-        base: 'New York',
         latLong: '40.779423 -73.974615'
     },
     {
@@ -38,7 +37,6 @@ export let fleet = [
         make: 'Toyota',
         model: 'Prius',
         miles: '105600',
-        base: 'New York',
         latLong: '40.99223 -73.974615'
     }
 ]

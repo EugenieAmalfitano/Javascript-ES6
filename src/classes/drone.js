@@ -1,7 +1,9 @@
 // Derived class
 import { Vehicle } from './vehicle.js'
 export class Drone extends Vehicle {
-    start() {
-        console.log('starting drone');
+    constructor(license, model, latLong) {
+        super(license, model, latLong);
+        this.airTimeHours = null;
+        this.base = null;
     }
 }
