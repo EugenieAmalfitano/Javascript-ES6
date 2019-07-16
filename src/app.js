@@ -1,16 +1,20 @@
 // Creating a Data Service Class
+import { Car } from './classes/car.js';
+import { Drone } from './classes/drone.js';
 import { fleet } from './fleet-data.js';
 import { FleetDataService } from '../services/fleet-data-service.js'
-import { DataError } from '../services/data-error.js';
 
 let dataService = new FleetDataService();
 dataService.loadData(fleet);
 
-for (let car of dataService.cars)
-    console.log(car);
+let car = dataService.getCarByLicense('AT9900');
+console.log('Car retrieved by License AT9900: ')
+console.log(car);
 
-for (let drone of dataService.drones)
-    console.log(drone);
+let cars = dataService.getCarsSortedByLicense();
+console.log('Sorted car licenses: ');
+for (let car of cars)
+    console.log(car.license);
 
 for (let e of dataService.errors) {
     console.log(e.message, e.data);

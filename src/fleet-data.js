@@ -1,17 +1,17 @@
 export let fleet = [
     {
         license: 'ABC123',
-        type: 'ddrone',
+        type: 'drone',
         model: 'Amazon 1250',
         airTimeHours: '6050',
         base: 'New York',
         latLong: '40.77596 -73.974615'
     },
     {
-        //license: 'ABC567',
+        license: 'ABC567',
         type: 'drone',
         model: 'Amazon 1550',
-        airTimeHours: 'x2199',
+        airTimeHours: '2199',
         base: 'New York',
         latLong: '40.77196 -73.974615'
     },
@@ -24,11 +24,11 @@ export let fleet = [
         latLong: '40.779423 -73.974615'
     },
     {
-        //license: 'AT9900',
+        license: 'AT9900',
         type: 'car',
         make: 'Tesla',
         model: 'Quick Transport',
-        miles: 'x15600',
+        miles: '15600',
         latLong: '40.779423 -73.974615'
     },
     {
