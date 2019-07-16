@@ -12,8 +12,10 @@ for (let car of dataService.cars)
 for (let drone of dataService.drones)
     console.log(drone);
 
+console.log(dataService.errors);
 for (let e of dataService.errors) {
-    console.log(e.message);
+    if (!e) break;
+    console.log(e.message, e.data);
 }
 
 
