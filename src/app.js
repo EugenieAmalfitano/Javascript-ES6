@@ -3,6 +3,14 @@ import { Car } from './classes/car.js';
 import { Drone } from './classes/drone.js';
 import { fleet } from './fleet-data.js';
 import { FleetDataService } from '../services/fleet-data-service.js'
+//For some reason, the following line is not needed to access jquery because I have TypeScript installed
+//import $ from 'jquery'; 
+
+import { Button } from '../UI/button.js';
+
+let b = new Button('Click me');
+b.appendToElement($('body'));
+
 const NewLine = '\r\n';
 let dataService = new FleetDataService();
 dataService.loadData(fleet);
