@@ -9,8 +9,15 @@ import { TitleBar } from '../ui/title-bar.js'
 //import $ from 'jquery'; 
 
 import { Button } from '../UI/button.js';
+import { DataTable } from '../UI/data-table.js';
 let b = new Button('Click me');
 b.appendToElement($('body'));
+
+let headers = "License Make Model Miles".split(' ');
+let dataService = new FleetDataService();
+dataService.loadData(fleet);
+let dt = new DataTable(headers, dataService.cars);
+dt.appendToElement($('body'));
 
 let tb = new TitleBar('Our Application');
 tb.addLink('Home', '');
@@ -23,8 +30,6 @@ let i = new Image('./UI/images/drone.jpg');
 i.appendToElement($('body'));
 
 const NewLine = '\r\n';
-let dataService = new FleetDataService();
-dataService.loadData(fleet);
 
 let car = dataService.getCarByLicense('AT9900');
 console.log('Car retrieved by License AT9900: ')
