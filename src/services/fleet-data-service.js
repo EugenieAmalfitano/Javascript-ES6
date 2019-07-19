@@ -1,5 +1,5 @@
-import { Car } from '../src/classes/car.js';
-import { Drone } from '../src/classes/drone.js';
+import { Car } from '../classes/car.js';
+import { Drone } from '../classes/drone.js';
 import { DataError } from './data-error.js';
 
 export class FleetDataService {

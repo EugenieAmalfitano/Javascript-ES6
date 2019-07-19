@@ -2,15 +2,15 @@
 import { Car } from './classes/car.js';
 import { Drone } from './classes/drone.js';
 import { fleet } from './fleet-data.js';
-import { FleetDataService } from '../services/fleet-data-service.js'
-import { Image } from '../UI/image.js';
-import { TitleBar } from '../ui/title-bar.js'
+import { FleetDataService } from './services/fleet-data-service.js';
+import { Image } from './ui/image.js';
+import { TitleBar } from './ui/title-bar.js';
 //For some reason, the following line is not needed to access jquery because I have TypeScript installed
 //import $ from 'jquery'; 
 
-import { Button } from '../UI/button.js';
-import { DataTable } from '../UI/data-table.js';
-import { GoogleMap } from '../UI/google-maps.js';
+import { Button } from './ui/button.js';
+import { DataTable } from './ui/data-table.js';
+import { GoogleMap } from './ui/google-map.js';
 let b = new Button('Click me');
 b.appendToElement($('body'));
 
@@ -32,7 +32,7 @@ let map = new GoogleMap(centerOfMap, dataService.drones);
 
 map.appendToElement($('body'));
 
-let i = new Image('./UI/images/drone.jpg');
+let i = new Image('/images/drone.jpg');
 i.appendToElement($('body'));
 
 const NewLine = '\r\n';
