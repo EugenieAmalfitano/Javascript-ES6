@@ -10,6 +10,7 @@ import { TitleBar } from '../ui/title-bar.js'
 
 import { Button } from '../UI/button.js';
 import { DataTable } from '../UI/data-table.js';
+import { GoogleMap } from '../UI/google-maps.js';
 let b = new Button('Click me');
 b.appendToElement($('body'));
 
@@ -25,6 +26,11 @@ tb.addLink('Cars', '');
 tb.addLink('Drones', '');
 tb.addLink('Map', '');
 tb.appendToElement($('body'));
+
+let centerOfMap = { lat: 40.783661, lng: -73.965883 };
+let map = new GoogleMap(centerOfMap, dataService.drones);
+
+map.appendToElement($('body'));
 
 let i = new Image('./UI/images/drone.jpg');
 i.appendToElement($('body'));
