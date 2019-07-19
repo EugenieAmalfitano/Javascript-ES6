@@ -1,25 +1,25 @@
 import { BaseElement } from './base-element.js';
 
 export class TitleBar extends BaseElement {
-    constructor(title) {
-        super();
-        this.title = title;
-        this.links = [];
-    }
+  constructor(title) {
+    super();
+    this.title = title;
+    this.links = [];
+  }
 
-    addLink(title, href) {
-        this.links.push({
-            title,
-            href
-        })
-    }
+  addLink(title, href) {
+    this.links.push({
+      title,
+      href
+    });
+  }
 
-    getElementString() {
-        let links = '';
-        for (let oneLink of this.links) {
-            links += `<a class="mdl-navigation__link" href="${oneLink.href}">${oneLink.title}</a>`
-        }
-        return `
+  getElementString() {
+    let links = '';
+    for (let oneLink of this.links) {
+      links += `<a class="mdl-navigation__link" href="${oneLink.href}">${oneLink.title}</a>`
+    }
+    return `
         <!-- Always shows a header, even in smaller screens. -->
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
           <header class="mdl-layout__header">
@@ -44,6 +44,6 @@ export class TitleBar extends BaseElement {
             <div class="page-content"><!-- Your content goes here --></div>
           </main>
         </div>
-        `
-    }
+        `;
+  }
 }
