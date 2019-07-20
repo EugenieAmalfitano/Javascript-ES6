@@ -9,14 +9,18 @@ export class DataTable extends BaseElement {
     getElementString() {
         let thTags = '';
         for (let h of this.headers) {
-            thTags += `<th class="mdl-data-table__cell--non-numeric">${h}</th>`
+            if (h == 'airTimeHours') h = 'Airtime Hours';
+            thTags += `<th class="mdl-data-table__cell--non-numeric">${h}</th>`;
         }
 
         let trTags = '';
         for (let row of this.data) {
             trTags += `<tr>`;
             for (let property of this.headers) {
-                let field = row[property.toLowerCase()];
+                let thisProperty = property.toLowerCase();
+                if (thisProperty == 'airtimehours') thisProperty = 'airTimeHours';
+                let field = row[thisProperty];
+
                 trTags += `<td class="mdl-data-table__cell--non-numeric">${field}</td>`
             }
             trTags += '</tr>'

@@ -19,7 +19,6 @@ export class GoogleMap extends BaseElement {
 
             for (let vehicle of this.data) {
                 let [lat, long] = vehicle.latLong.split(' ');
-                console.log('lat:' + lat);
                 let myLatLng = new window.google.maps.LatLng(lat, long);
 
                 var marker = new window.google.maps.Marker({
