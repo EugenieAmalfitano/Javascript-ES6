@@ -11,6 +11,7 @@ import { HomePage } from './home-page.js';
 import { CarsPage } from './cars-page.js';
 import { DronesPage } from './drones-page.js';
 import { MapPage } from './map-page.js';
+import { DemoSpecialQueries } from './services/fleet-queries.js';
 
 export class App extends ApplicationBase {
 
@@ -26,6 +27,10 @@ export class App extends ApplicationBase {
         this.addRoute('Map', new MapPage());
     }
 }
+
+let demo = new DemoSpecialQueries();
+demo.demoSpecialQueries();
+demo.showDataErrorLog();
 
 export let application = new App();
 application.show($('body'));
