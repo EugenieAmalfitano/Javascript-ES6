@@ -10,6 +10,7 @@ import { ApplicationBase } from './framework/application-base.js';
 import { HomePage } from './home-page.js';
 import { CarsPage } from './cars-page.js';
 import { DronesPage } from './drones-page.js';
+import { ExplorePage } from './explore-page.js';
 import { MapPage } from './map-page.js';
 import { DemoSpecialQueries } from './services/fleet-queries.js';
 
@@ -25,6 +26,7 @@ export class App extends ApplicationBase {
         this.addRoute('Cars', new CarsPage());
         this.addRoute('Drones', new DronesPage());
         this.addRoute('Map', new MapPage());
+        this.addRoute('Explore', new ExplorePage());
     }
 }
 

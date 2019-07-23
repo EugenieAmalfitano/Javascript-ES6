@@ -12,7 +12,7 @@ export class HomePage extends Page {
     createElement() {
         super.createElement();
 
-        let i = new Image('../images/drone.jpg');
+        let i = new Image('../images/drone.jpg','30%');
         i.appendToElement(this.element);
 
         let styleString = 'width: 300px; height: 80px; font-size: 26px; margin: 10px;';
