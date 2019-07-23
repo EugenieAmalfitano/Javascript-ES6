@@ -2,10 +2,10 @@
 Based on Pluralsight Class Object-oriented Programming in JavaScript - ES6
 
 Here are some tips to set up the environment: 
-- Install Node.js if you don't already have it: https://nodejs.org/en/download/
 - I developed it in VS Code (availabe here -- https://code.visualstudio.com/download)
 - Open this project's folder in VS Code
 - VS Code Shift-Ctrl-C -- puts you in the right folder inside VS Code to run NPM init <package>
+- Install Node.js into your project folder: https://nodejs.org/en/download/
 
 <b>NPM commands</b>
 <br/>
