@@ -1,6 +1,7 @@
 import { Page } from './framework/page.js';
 import { Image } from './ui/image.js';
 import { Paragraph } from './ui/paragraph.js';
+import { Button } from './ui/button.js';
 import {application} from './app.js';
 
 export class ExplorePage extends Page {
@@ -13,7 +14,7 @@ export class ExplorePage extends Page {
     
     createElement() {
         super.createElement();  
-        let p = new Paragraph("Eugenie and Deb are working together to build cool things.");
+        let p = new Paragraph("Eugenie, Deb, and Claire are working together to build cool things.");
         p.fontColor = 'black';
         p.fontFamily = 'verdana';
         p.fontSize = '18';
@@ -31,6 +32,23 @@ export class ExplorePage extends Page {
         p.fontColor = 'blue';
         p.buildStyleString();
         p.appendToElement(this.element);
+        p.isAddBreak = false;
+
+        let styleString = 'font-size: 12px; margin: 10px;';
+        let b = new Button("Eugenie's Github");
+        b.setStyleString(styleString);
+        b.appendToElement(this.element);
+        b.element.click(() => window.open('https://github.com/EugenieAmalfitano?tab=repositories', '_blank'));
+
+        b = new Button("Debbie's Github");
+        b.setStyleString(styleString);
+        b.appendToElement(this.element);
+        b.element.click(() => window.open('https://github.com/debbiev', '_blank'));
+
+        b = new Button("Claire's Github");
+        b.setStyleString(styleString);
+        b.appendToElement(this.element);
+        b.element.click(() => window.open('https://github.com/polypodioides', '_blank'));
     }
     
     getElementString() {
