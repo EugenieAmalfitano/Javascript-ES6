@@ -14,7 +14,10 @@ export class ExplorePage extends Page {
         super.createElement();  
         let i = new Image('../images/eaa.gif','300px');
         i.appendToElement(this.element);
+
         let b = new Paragraph('New Paragraph Element Here.');
+        let styleString = 'font-family:verdana; font-size: 26px; color:blue; text-align:left;';
+        b.setStyleString(styleString);
         b.appendToElement(this.element);
     }
     
