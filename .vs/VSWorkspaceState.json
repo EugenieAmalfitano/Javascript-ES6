@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\images",
+    "\\src",
+    "\\src\\framework",
+    "\\src\\services",
+    "\\src\\ui"
   ],
-  "SelectedNode": "\\src\\app.js",
+  "SelectedNode": "\\src\\ui\\paragraph.js",
   "PreviewInSolutionExplorer": false
 }

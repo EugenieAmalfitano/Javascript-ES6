@@ -1,20 +1,44 @@
 import { BaseElement } from './base-element.js';
 
 export class Paragraph extends BaseElement {
-    constructor(textString,styleString,extraBreak) {
+    constructor(textString) {
         super();
         this.textString = textString;
-        this.styleString = '';
-        this.extraBreak = false;
+    }
+
+    set fontFamily(fontFamily) {
+        this._fontFamily = fontFamily;
+    }
+
+    set fontSize(fontSize) {
+        this._fontSize = fontSize;
+    }
+
+    set fontColor(fontColor) {
+        this._fontColor = fontColor;
+    }
+
+    set textAlign(textAlign) {
+        this._textAlign = textAlign;
+    }
+
+    set isAddBreak(isAddBreak) {
+        this.brTag = ``;
+        this._isExtraSpace = isAddBreak;
+        if (this._isExtraSpace == true) {
+            this.brTag = `<br><br>`;
+        }
+    }
+
+    buildStyleString() {
+        this._styleString = `font-family:${this._fontFamily}; font-size:${this._fontSize}px; color:${this._fontColor}; text-align:${this._textAlign};`;
     }
 
     getElementString() {
+        console.log('br tag: ' + this.brTag);
         return `
-             <p style="${this.styleString}">${this.textString}</p>
-             <br/>
+             <p style="${this._styleString}">${this.textString}</p>
+             ${this.brTag}             
         `
-    }
-    setStyleString(style) {
-        this.styleString = style;
     }
 }
