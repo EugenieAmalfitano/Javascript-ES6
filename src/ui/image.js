@@ -10,7 +10,6 @@ export class Image extends BaseElement {
     getElementString() {
         return `
              <img src = "${this.fileName}" style="width: ${this.imageWidth};" />
-             <br/>
         `
     }
 
