@@ -35,7 +35,6 @@ export class Paragraph extends BaseElement {
     }
 
     getElementString() {
-        console.log('br tag: ' + this.brTag);
         return `
              <p style="${this._styleString}">${this.textString}</p>
              ${this.brTag}             
