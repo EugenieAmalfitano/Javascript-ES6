@@ -31,12 +31,7 @@ export class FleetPage extends Page {
 
         let styleString = 'width: 100px; height: 40px; font-size: 12px; margin: 10px;';
 
-        let b = new Button('Explore');
-        b.setStyleString(styleString);
-        b.appendToElement(this.element);
-        b.element.click(() => application.activateRoute('Explore'));
-
-        b = new Button('Cars');
+        let b = new Button('Cars');
         b.setStyleString(styleString);
         b.appendToElement(this.element);
         b.element.click(() => application.activateRoute('Cars')); 
