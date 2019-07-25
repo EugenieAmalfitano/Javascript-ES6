@@ -11,7 +11,7 @@ export class MapPage extends Page {
     createElement() {
         super.createElement();
         
-        let centerOfMap = {lat: 40.783661, lng: -73.965883}; 
+        let centerOfMap = { lat: 28.0873976, lng: -80.5656052}; 
         let map = new GoogleMap(centerOfMap, application.dataService.cars);
         map.appendToElement(this.element);
 
