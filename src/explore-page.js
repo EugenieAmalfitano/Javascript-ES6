@@ -8,52 +8,17 @@ export class ExplorePage extends Page {
     
     constructor() {
         super('Explore');
-        this.explorePageText = '';
-        /* this.explorePageText = 'text here' //Another way to add text, but can't set style properties; */
+        this.explorePageText = 'Under Construction';
+
     }
     
     createElement() {
-        super.createElement();  
-        let p = new Paragraph("Eugenie, Deb, and Claire are working together to build cool things.");
-        p.fontColor = 'black';
-        p.fontFamily = 'verdana';
-        p.fontSize = '18';
-        p.textAlign = 'left';
-        p.isAddBreak = true;
-        p.buildStyleString();
-        p.appendToElement(this.element);
- 
-        let i = new Image('../images/eaa.gif','300px');
-        i.appendToElement(this.element);
-        i = new Image('../images/4411641.gif.png', '300px');
-        i.appendToElement(this.element);
-
-        p.textString="That\'s why Eugenie is doing the happy dance!";
-        p.fontColor = 'blue';
-        p.buildStyleString();
-        p.appendToElement(this.element);
-        p.isAddBreak = false;
-
-        let styleString = 'font-size: 12px; margin: 10px;';
-        let b = new Button("Eugenie's Github");
-        b.setStyleString(styleString);
-        b.appendToElement(this.element);
-        b.element.click(() => window.open('https://github.com/EugenieAmalfitano?tab=repositories', '_blank'));
-
-        b = new Button("Debbie's Github");
-        b.setStyleString(styleString);
-        b.appendToElement(this.element);
-        b.element.click(() => window.open('https://github.com/debbiev', '_blank'));
-
-        b = new Button("Claire's Github");
-        b.setStyleString(styleString);
-        b.appendToElement(this.element);
-        b.element.click(() => window.open('https://github.com/polypodioides', '_blank'));
+        super.createElement();   
     }
     
     getElementString() {
         return `<div style="margin: 20px;"><h3>Explore</h3>
-                <p>${this.explorePageText}</p>
+                <h4>${this.explorePageText}</h4>
                 </div>  
                 `;
     }

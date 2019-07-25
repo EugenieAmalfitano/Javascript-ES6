@@ -23,10 +23,10 @@ export class App extends ApplicationBase {
         this.dataService.loadData(fleet);
 
         this.addRoute('Home', new HomePage(), true);
-        this.addRoute('Fleet', new FleetPage());
-        this.addRoute('Cars', new CarsPage());
-        this.addRoute('Drones', new DronesPage());
-        this.addRoute('Map', new MapPage());
+        this.addRoute('Fleet Sample App', new FleetPage('Fleet Sample App'));
+        this.addRoute('Cars', new CarsPage('     Cars'));
+        this.addRoute('Drones', new DronesPage('     Drones'));
+        this.addRoute('Map', new MapPage('     Map'));
         this.addRoute('Explore', new ExplorePage());
     }
 }

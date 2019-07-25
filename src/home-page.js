@@ -12,38 +12,44 @@ export class HomePage extends Page {
 
     createElement() {
         super.createElement();
-
-        let i = new Image('../images/drone.jpg', '620px');
-        i.appendToElement(this.element);
-
-        // add paragraph just for spacing.
-        let p = new Paragraph(''); 
+        let p = new Paragraph("Eugenie, Deb, and Claire are working together to build cool things.");
+        p.fontColor = 'black';
+        p.fontFamily = 'verdana';
+        p.fontSize = '18';
+        p.textAlign = 'left';
+        p.isAddBreak = true;
+        p.buildStyleString();
         p.appendToElement(this.element);
 
-        let styleString = 'width: 100px; height: 40px; font-size: 12px; margin: 10px;';
+        let i = new Image('../images/eugenie.gif', '300px');
+        i.appendToElement(this.element);
+        i = new Image('../images/4411641.gif.png', '300px');
+        i.appendToElement(this.element);
 
-        let b = new Button('Explore');
+        p.textString = "That\'s why Eugenie is doing the happy dance!";
+        p.fontColor = 'blue';
+        p.buildStyleString();
+        p.appendToElement(this.element);
+        p.isAddBreak = false;
+
+        let styleString = 'font-size: 12px; margin: 10px;';
+        let b = new Button("Eugenie's Github");
         b.setStyleString(styleString);
         b.appendToElement(this.element);
-        b.element.click(() => application.activateRoute('Explore'));
+        b.element.click(() => window.open('https://github.com/EugenieAmalfitano?tab=repositories', '_blank'));
 
-        b = new Button('Cars');
+        b = new Button("Debbie's Github");
         b.setStyleString(styleString);
         b.appendToElement(this.element);
-        b.element.click(() => application.activateRoute('Cars'));
+        b.element.click(() => window.open('https://github.com/debbiev', '_blank'));
 
-        b = new Button('Drones');
+        b = new Button("Claire's Github");
         b.setStyleString(styleString);
         b.appendToElement(this.element);
-        b.element.click(() => application.activateRoute('Drones'));
-
-        b = new Button('Map');
-        b.setStyleString(styleString);
-        b.appendToElement(this.element);
-        b.element.click(() => application.activateRoute('Map'));
+        b.element.click(() => window.open('https://github.com/polypodioides', '_blank'));
     }
 
     getElementString() {
-        return '<div style="text-align: left;"></div>';
+        return '<div style="text-align: left; margin: 20px"></div>';
     }
 }
