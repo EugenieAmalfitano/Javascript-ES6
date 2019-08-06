@@ -3,10 +3,11 @@
     "",
     "\\images",
     "\\src",
+    "\\src\\classes",
     "\\src\\framework",
     "\\src\\services",
     "\\src\\ui"
   ],
-  "SelectedNode": "\\src\\explore-page.js",
+  "SelectedNode": "\\src\\ui\\base-element.js",
   "PreviewInSolutionExplorer": false
 }
